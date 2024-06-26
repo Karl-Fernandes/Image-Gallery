@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: sticky;    /* ensures that nav is always displayed on screen */
+    top: 0;
+    left: 0;
+    z-index: 1;          /* ensures that nav stays above other elements with lower z-index */
+    display: flex;       /* uses flexbox layout for the nav's child elements */
+    align-items: center; /* vertically centers the items in the nav */
+    justify-content: space-between; /* places space between the items in the nav, pushing them to the sides */
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: flex;            /* Use flexbox for layout */
+    align-items: center;      /* Align items vertically in the center */
+    justify-content: center;  /* Align items horizontally in the center */
+    gap: 10px;                /* Spacing between buttons */
+    flex-grow: 1;             /* Allow the button container to grow */
+}
+
+nav button {
+    padding: 10px 20px;       /* Adjust button padding */
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn li {
+    list-style-type: none; 
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.gallery img {
+    width: 100%;
+}
